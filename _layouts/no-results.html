@@ -26,20 +26,27 @@
     </div>
     <div class="container">
       <div class="row justify-content-center mt-3">
-        <div class="col-12 text-center">
+        <div class="col-7">
           <img
-            class="mb-4"
+            class="mb-4 mx-auto d-flex"
             width="255px"
             height="auto"
-            src="{{site.url}}/assets/sunny.svg"
+            src="{{site.url}}/assets/rainy.svg"
           />
           <h1 class="h5 text-muted mb-4">
             <strong>
-              Scout ahead for ideal working conditions with
-              rosterforecast!
+                Your search for {search.text} did not match any results. 
             </strong>
           </h1>
-          <p class="lead"><span class="mr-2">Sample our forecasts:</span> <button type="button" class="btn btn-light rounded-pill border">Longmont</button> <button type="button" class="btn btn-light rounded-pill border">San Francisco</button> <button type="button" class="btn btn-light rounded-pill border">Rochester</button></p>
+          <p class="lead">
+            Search Suggestions:            
+          </p>
+          <ul>
+            <li>Make sure all words are spelled correctly</li>
+            <li>Make sure address is correctly formatted</li>
+            <li>Try zipcode</li>
+            <li>Try City and State</li>
+        </ul>
         </div>
       </div>
     </div>
