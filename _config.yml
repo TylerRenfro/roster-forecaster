@@ -30,7 +30,8 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-#theme: minima
+theme: minima
+remote_theme: jekyll-theme-cayman
 sass:
     sass_dir: _sass
 collections:
@@ -60,5 +61,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-theme: jekyll-theme-cayman
