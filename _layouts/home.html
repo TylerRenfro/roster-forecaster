@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include nav.html %}    
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">{{ page.title }}</h1>
+          {{ content }}              
+      </div>
+    </div>
+    <div class="container">
+    {% for era in site.eras %}
+      <div class="row align-items-end mt-3">
+        <div class="col-sm-12 col-md-9">          
+            <h2><strong>{{ era.name }} Era</strong></h2>
+            <h3>{{ era.year }}</h3>
+            {% for setSymbol in era.setSymbols %}
+              <img width="30px" height="auto" src="{{site.url}}/assets/{{ setSymbol.name }}">
+            {% endfor %}
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h6><strong>Resources</strong></h6>
+                <ul class="list-unstyled m-0">
+                {% for resource in era.resources %}
+                  <li class="py-1"><a class="text-decoration-none" href="#">{{ resource.name }}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+          </div>                        
+        </div>
+      </div>
+      <div class="row pb-3">
+        <div class="col">
+            <hr>
+            <div class="row">
+            {% for format in era.formats %}
+              <div class="col-sm-12 col-md-4">
+                <a type="button" href="{{ format.url }}" class="btn btn-light w-100 my-3 btn-lg">
+                  {{ format.name }}
+                </a>
+              </div>
+            {% endfor %}            
+            </div>                                  
+        </div>
+      </div>
+    {% endfor %}
+    </div>    
+  </body>
+</html>
