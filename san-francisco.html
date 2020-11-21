@@ -1,8 +1,8 @@
 ---
 layout: forecast-results
-permalink: /search-results/
+permalink: /san-francisco/
 ---
-{% for forecast in site.longmont %}
+{% for forecast in site.san-francisco %}
     <h1><strong>7 Day Forecast - {{ forecast.name }}</strong></h1>
     <p class="lead">as of {{forecast.timestamp}}</p>
     {% for day in forecast.day %}

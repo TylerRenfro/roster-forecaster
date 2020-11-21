@@ -35,6 +35,9 @@ sass:
     sass_dir: _sass
 collections:
   - longmont
+  - rochester
+  - denver
+  - san-francisco
 plugins:
   - jekyll-feed
 
