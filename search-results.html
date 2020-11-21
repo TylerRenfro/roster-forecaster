@@ -1,0 +1,52 @@
+---
+layout: forecast-results
+permalink: /search-results/
+---
+{% for forecast in site.longmont %}
+    <h1>7 Day Forecast - {{ forecast.name }} </h1>
+    <p>as of {{forecast.timestamp}}</p>
+    {% for day in forecast.day %}
+            <div class="card">
+                <div class="row">
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="p-3 mb-2 {{ day.conditionsRating | downcase }} h-100 d-flex align-items-center">
+                            {{ day.conditionsRating }}<br class="d-none d-md-flex"> Condtions
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-sm-9 col-md-9 p-3">
+                        <div class="row align-items-end h-100 flex-wrap p-4 p-md-0">
+                            <div class="col-6 col-md-12">
+                                <h5 class="mb-md-3 m-0 text-muted">
+                                    {{ day.name }}
+                                    <br class="d-flex d-md-none">
+                                    {{ day.month}} {{ day.date}}
+                                </h5>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <h4 class="m-0"><strong>{{ day.tempHigh }}&#176;</strong>/{{day.tempLow}}&#176;</h4>
+                            </div>
+                            <hr class="w-100 d-md-none m-3">
+                            <div class="col-4 col-md-3">
+                                <div class="d-flex">
+                                    <img class="mr-2" width="25px" src="{{site.url}}/assets/{{day.weather}}.svg">
+                                    <h5 class="m-0">{{ day.weather | capitalize }}</h5>
+                                </div>  
+                            </div>
+                            <div class="col-4 col-md-3">
+                                <div class="d-flex">
+                                    <img class="mr-2" width="15px" src="{{site.url}}/assets/precipitation.svg">
+                                    <h5 class="m-0">{{ day.precipitation }}%</h5>
+                                </div>  
+                            </div>
+                            <div class="col-4 col-md-3">
+                                <div class="d-flex">
+                                    <img class="mr-2" width="25px" src="{{site.url}}/assets/wind.svg">
+                                    <h5 class="m-0">{{ day.wind }}mph</h5>
+                                </div>  
+                            </div>                                                                                        
+                        </div>
+                    </div>
+                </div>                                
+            </div>                 
+    {% endfor %}
+{% endfor  %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+    <div class="jumbotron bg-dark rounded-0"">
+      <div class="container">
+        <div class="row justify-content-center mt-3">
+          <div class="col-7">
+            <label class="text-white">Search City or Zip Code</label>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Text input with segmented dropdown button"
+              />
+              <div class="input-group-append">
+                <button type="button" class="btn btn-primary">
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center mt-3">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-10">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

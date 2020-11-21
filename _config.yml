@@ -33,6 +33,8 @@ github_username:  jekyll
 theme: minima
 sass:
     sass_dir: _sass
+collections:
+  - longmont
 plugins:
   - jekyll-feed
 
