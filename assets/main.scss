@@ -21,4 +21,10 @@
 .harsh {
     background-color: #FCD9D9;
 }
+@include media-breakpoint-up(xs) {
+    h4.secondary-data {
+        font-size: 1rem;
+    }
+  }
+
 
