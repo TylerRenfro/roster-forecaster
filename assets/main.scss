@@ -21,12 +21,19 @@
 .harsh {
     background-color: #FCD9D9;
 }
+
+.date {
+    margin-bottom: 1rem;
+}
 @include media-breakpoint-only(xs) {
     h4.secondary-data {
         font-size: 1.15rem;
     }
     .temperature {
         font-size: 2rem;
+    }
+    .date {
+        margin-bottom: 0;
     }
   }
 
