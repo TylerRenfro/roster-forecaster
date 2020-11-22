@@ -25,6 +25,10 @@
 .date {
     margin-bottom: 1rem;
 }
+
+.search-placehoder-icon {
+    opacity: .4;
+}
 @include media-breakpoint-only(xs) {
     h4.secondary-data {
         font-size: 1.15rem;
