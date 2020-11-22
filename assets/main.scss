@@ -21,10 +21,13 @@
 .harsh {
     background-color: #FCD9D9;
 }
-// @include media-breakpoint-up(xs) {
-//     h4.secondary-data {
-//         font-size: 1rem;
-//     }
-//   }
+@include media-breakpoint-only(xs) {
+    h4.secondary-data {
+        font-size: 1.15rem;
+    }
+    .temperature {
+        font-size: 2rem;
+    }
+  }
 
 
